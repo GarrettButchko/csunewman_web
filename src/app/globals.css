@@ -1,26 +1,38 @@
+@import url("https://use.typekit.net/bsb4ixg.css");
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --cream: #e7e2c8;
+  --background: #3e4a2b;
+  --button: #283316;
+  --lightGreen: #adb680;
 }
 
 @theme inline {
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-cream: var(--cream);
+  --color-button: var(--button);
+  --color-lightGreen: var(--lightGreen);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "montserrat", sans-serif;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+@layer utilities {
+  .font-larken {
+    font-family: larken, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
 }
