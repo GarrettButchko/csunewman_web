@@ -3,9 +3,9 @@
 
 :root {
   --cream: #e7e2c8;
-  --background: #3e4a2b;
+  --background: #adb680;
   --button: #283316;
-  --lightGreen: #adb680;
+  --lightGreen: #3e4a2b;
 }
 
 @theme inline {
