@@ -1,3 +1,4 @@
+
 interface HeroSectionProps {
   heading: string;
   description: string;
@@ -16,7 +17,7 @@ export default function HeroSection({
   textColor = "text-button",
 }: HeroSectionProps) {
   return (
-    <section className=" w-full px-4 ">
+    <section className="w-full px-4 ">
         <div className="overflow-hidden rounded-sm mx-auto max-w-6xl grid shadow-[0_12px_30px_rgba(0,0,0,0.22)] md:grid-cols-2">
       <div className={`${bgColor} px-8 py-12 ${textColor} sm:px-12`}>
         <h2 className={`font-larken text-4xl ${textColor}`}>{heading}</h2>
