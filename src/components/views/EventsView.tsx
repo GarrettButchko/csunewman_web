@@ -1,3 +1,7 @@
+'use client';
+
+import { useState } from 'react';
+
 const upcomingEvents = [
   {
     day: '12',
@@ -29,29 +33,34 @@ const upcomingEvents = [
 ];
 
 export default function EventsView() {
+  const [selectedDay, setSelectedDay] = useState<number | null>(null);
+
+  const eventsByDay: Record<number, typeof upcomingEvents> = {
+    12: [upcomingEvents[0]],
+    18: [upcomingEvents[1]],
+    24: [upcomingEvents[2]],
+  };
   return (
     <div className="space-y-8 bg-background px-4 py-4 text-cream sm:px-4 lg:px-8">
-      <section className="mx-auto max-w-6xl rounded-sm bg-button px-6 py-8 shadow-[0_12px_30px_rgba(0,0,0,0.22)] sm:px-8 lg:px-10">
-        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+      <section className="mx-auto max-w-6xl rounded-sm bg-button px-6 py-5 shadow-[0_12px_30px_rgba(0,0,0,0.22)] sm:px-8 lg:px-10">
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
           <div className="max-w-2xl">
             <p className="text-xs uppercase tracking-[0.25em] text-cream/70">Upcoming Events</p>
-            <h2 className="mt-2 font-larken text-4xl leading-none text-cream sm:text-5xl">
-              Gather, pray, and grow together.
+            <h2 className="mt-3 font-larken text-4xl leading-none text-cream sm:text-5xl">
+              Join Us for Worship, Service, and Fellowship
             </h2>
-            <p className="mt-4 max-w-xl text-sm leading-6 text-cream/80 sm:text-base">
-              Our event schedule brings together worship, service, fellowship, and formation in the
-              same warm visual language used throughout the site.
+          </div>
+
+          <div className="flex items-start lg:items-center">
+            <p className="mt-2 max-w-xl text-sm leading-6 text-cream/80 sm:text-base">
+              Our event schedule brings together worship, service, fellowship, and formation in the heart of campus life. Join us for Mass, community dinners, service opportunities, and more to connect with other students and grow in faith together.
             </p>
           </div>
 
-          <div className="rounded-sm border border-cream/20 bg-cream/10 px-5 py-4 text-sm text-cream/85">
-            <p className="font-semibold text-cream">Weekly rhythm</p>
-            <p className="mt-1">Mass, adoration, service, and student meetups throughout the month.</p>
-          </div>
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-[1.3fr_0.7fr]">
+      <section className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-[1.3fr_0.7fr] -mt-2">
         <div className="space-y-6">
           <article className="rounded-sm bg-cream p-6 text-[#2D3E1A] shadow-[0_12px_30px_rgba(0,0,0,0.18)] sm:p-8">
             <div className="flex flex-wrap items-center gap-3">
@@ -67,24 +76,14 @@ export default function EventsView() {
                 <p className="mt-2 font-larken text-6xl leading-none">12</p>
                 <p className="mt-2 text-sm text-cream/80">5:30 PM</p>
               </div>
-
+              
               <div>
-                <h3 className="font-larken text-3xl text-button">Campus Mass & Dinner</h3>
+                <h3 className="font-larken text-3xl text-button -mt-2">Campus Mass & Dinner</h3>
                 <p className="mt-3 text-sm leading-6 text-[#445234]">
                   Start the evening with Mass, stay for dinner, and spend time with the Newman Center
                   community in a relaxed setting.
                 </p>
 
-                <div className="mt-5 grid gap-3 text-sm sm:grid-cols-2">
-                  <div className="rounded-sm border border-lightGreen/60 bg-background/5 px-4 py-3">
-                    <p className="text-xs uppercase tracking-[0.2em] text-[#5b6740]">Location</p>
-                    <p className="mt-1 font-semibold text-button">St. Peter Catholic Church</p>
-                  </div>
-                  <div className="rounded-sm border border-lightGreen/60 bg-background/5 px-4 py-3">
-                    <p className="text-xs uppercase tracking-[0.2em] text-[#5b6740]">What to bring</p>
-                    <p className="mt-1 font-semibold text-button">A friend and an open evening</p>
-                  </div>
-                </div>
               </div>
             </div>
           </article>
@@ -118,7 +117,7 @@ export default function EventsView() {
         <aside className="space-y-6">
           <section className="rounded-sm bg-button px-6 py-6 text-cream shadow-[0_12px_30px_rgba(0,0,0,0.18)]">
             <h3 className="font-larken text-3xl">Recurring Events</h3>
-            <div className="mt-4 space-y-4 text-sm text-cream/85">
+            <div className="mt-4 h-58 space-y-4 text-sm text-cream/85">
               <div>
                 <p className="font-semibold text-cream">Sunday Mass</p>
                 <p className="mt-1">Every Sunday at 11:30 AM and 7:00 PM.</p>
@@ -136,13 +135,46 @@ export default function EventsView() {
 
           <section className="rounded-sm bg-cream px-6 py-6 text-[#2D3E1A] shadow-[0_12px_30px_rgba(0,0,0,0.16)]">
             <p className="text-xs uppercase tracking-[0.22em] text-[#6a764e]">Plan ahead</p>
-            <h3 className="mt-2 font-larken text-3xl text-button">Want reminders?</h3>
-            <p className="mt-3 text-sm leading-6 text-[#4d5a35]">
-              Check back here for the latest dates, or send a message if you want help finding the
-              next event to attend.
-            </p>
-            <div className="mt-5 rounded-sm bg-background px-4 py-3 text-sm text-cream/85">
-              Events are updated here as the semester schedule changes.
+            <h3 className="mt-2 font-larken text-3xl text-button">Event Calendar</h3>
+            <div className="mt-4">
+              <div className="grid grid-cols-7 gap-x-1 gap-y-3 text-center text-xs">
+                {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(day => (
+                  <div key={day} className="font-semibold text-[#6a764e]">{day}</div>
+                ))}
+                <div></div>
+                <div></div>
+                <div></div>
+                {Array.from({ length: 30 }, (_, i) => i + 1).map(day => {
+                  const hasEvent = eventsByDay[day];
+                  return (
+                    <button
+                      key={day}
+                      onClick={() => setSelectedDay(day)}
+                      className={`relative h-8 w-8 rounded-sm text-sm ${
+                        selectedDay === day
+                          ? 'bg-button text-cream'
+                          : 'bg-background/10 text-[#2D3E1A] hover:bg-button/20'
+                      }`}
+                    >
+                      {day}
+                      {hasEvent && (
+                        <span className="absolute -top-1 -right-1 h-2 w-2 rounded-full bg-button"></span>
+                      )}
+                    </button>
+                  );
+                })}
+              </div>
+              {selectedDay && eventsByDay[selectedDay] && (
+                <div className="mt-4 space-y-2">
+                  {eventsByDay[selectedDay].map(event => (
+                    <div key={event.title} className="rounded-sm bg-background/5 p-3 text-sm">
+                      <p className="text-base font-semibold text-button">{event.title}</p>
+                      <p className="text-[#556245]">{event.time} at {event.location}</p>
+                      <p className="text-xs text-[#556245] mt-1">{event.description}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           </section>
         </aside>

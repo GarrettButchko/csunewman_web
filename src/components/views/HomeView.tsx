@@ -52,7 +52,7 @@ export default function HomeView() {
       <section className="w-full px-4">
         <div className="mx-auto max-w-6xl rounded-sm bg-button px-6 py-14 text-cream shadow-[0_12px_30px_rgba(0,0,0,0.22)] text-center">
           <p className="font-larken text-3xl leading-tight sm:text-4xl">
-            "Go forth and set the world on fire"
+            "Go forth and set the world on fire."
           </p>
           <p className="mt-2 font-serif text-lg text-cream/85">
             - St. Ignatius of Loyola
