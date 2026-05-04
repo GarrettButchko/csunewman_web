@@ -17,8 +17,12 @@ export default function Header({ onNavigate, activeView }: HeaderProps) {
     <header className="sticky top-0 z-50 w-full">
       <div className="flex items-center justify-between gap-4 bg-button px-5 py-4 sm:px-6">
         <div className="flex items-center gap-4 text-cream">
-          <div className="flex h-14 w-14 items-center justify-center rounded-full border border-cream/40 bg-lightGreen/30 text-xl font-semibold">
-            VC
+          <div className="flex h-14 w-14 items-center justify-center text-xl font-semibold">
+            <img
+                src="/logo.png"
+                alt="Viking Catholic Logo"
+                className="h-full w-full object-contain p-0"
+            />
           </div>
           <div>
             <h1 className="font-larken text-2xl leading-none text-cream sm:text-3xl">Viking Catholic</h1>

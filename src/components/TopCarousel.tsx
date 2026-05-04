@@ -10,17 +10,17 @@ type Slide = {
 
 const slides: Slide[] = [
   {
-    image: 'https://picsum.photos/id/1011/1600/700',
+    image: '/randr.png',
     title: 'Faith In Community',
     subtitle: 'Gather. Pray. Grow together at Newman each week.',
   },
   {
-    image: 'https://picsum.photos/id/1036/1600/700',
+    image: '/groupphoto.png',
     title: 'Moments That Matter',
     subtitle: 'Join retreats, worship nights, and service projects.',
   },
   {
-    image: 'https://picsum.photos/id/1040/1600/700',
+    image: '/tabling.png',
     title: 'Find Your Place',
     subtitle: 'Build lasting friendships rooted in Christ.',
   },
@@ -60,7 +60,7 @@ export default function TopCarousel() {
               alt={slide.title}
               className="h-[40vh] min-h-[260px] w-full object-cover sm:h-[46vh]"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/35 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/35 to-transparent"/>
             <div className="absolute inset-x-0 bottom-0 p-6 text-cream sm:p-8">
               <h2 className="font-larken text-3xl sm:text-4xl">{slide.title}</h2>
               <p className="mt-2 max-w-lg text-sm text-cream/90 sm:text-base">{slide.subtitle}</p>
