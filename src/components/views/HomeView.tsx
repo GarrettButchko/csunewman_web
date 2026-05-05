@@ -9,33 +9,33 @@ export default function HomeView() {
 
       <HeroSection
         heading="Welcome"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porttitor, nibh eget commodo sagittis, massa eros iaculis dui, at auctor orci orci vel mi. Vestibulum aliquam purus at enim lobortis tincidunt. Sed mattis lobortis sapien at dictum."
+        description="We are a Catholic campus community rooted in prayer, friendship, and service. Join us for Mass, formation, and events that help students grow in faith and find belonging at St. Peter."
         buttonText="Learn More"
         imageSrc="/stPeter.png"
       />
 
       <section className="w-full px-4">
         <div className="mx-auto max-w-6xl rounded-sm bg-button px-8 py-12 text-cream  sm:px-12 shadow-[0_12px_30px_rgba(0,0,0,0.22)] grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
-          <div>
+          <div className="pe-5">
             <h2 className="font-larken text-4xl text-cream">Daily Reading</h2>
-            <p className="mt-1 text-xs text-cream/70">Date: March 19, 2026</p>
+            <p className="mt-1 text-xs text-cream/70">This Week at St. Peter</p>
 
-            <div className="mt-6 space-y-5 text-sm leading-6 text-cream/85 pe-5">
+            <div className="mt-6 space-y-5 text-sm leading-6 text-cream/85">
               <p>
-                <span className="font-semibold text-cream">Lorem:</span> ipsum dolor sit amet,
-                consectetur adipiscing elit.
+                <span className="font-semibold text-cream">Prayer:</span> Start the week by asking God
+                for wisdom, courage, and a heart that notices the needs of others.
               </p>
               <p>
-                <span className="font-semibold text-cream">Maecenas:</span> porttitor, nibh eget
-                commodo sagittis, massa eros iaculis dui, at auctor orci orci vel mi.
+                <span className="font-semibold text-cream">Community:</span> Make time for conversation,
+                fellowship, and shared meals with the Newman community and parish family.
               </p>
               <p>
-                <span className="font-semibold text-cream">Vestibulum:</span> aliquam purus at enim
-                lobortis tincidunt. Sed mattis lobortis sapien at dictum.
+                <span className="font-semibold text-cream">Service:</span> Look for a simple way to serve
+                a classmate, a neighbor, or someone who may be struggling this week.
               </p>
               <p>
-                <span className="font-semibold text-cream">Vestibulum:</span> aliquam purus at enim
-                lobortis tincidunt. Sed mattis lobortis sapien at dictum.
+                <span className="font-semibold text-cream">Scripture:</span> Return to the Gospel throughout
+                the week and let it shape your choices, conversations, and priorities.
               </p>
             </div>
           </div>
@@ -46,7 +46,7 @@ export default function HomeView() {
 
       <HeroSection
         heading="Contact Us"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porttitor, nibh eget commodo sagittis, massa eros iaculis dui, at auctor orci orci vel mi. Vestibulum aliquam purus at enim lobortis tincidunt. Sed mattis lobortis sapien at dictum."
+        description="Have a question about Mass, events, sacraments, or getting involved? Reach out and we will connect you with the right person."
         buttonText="Learn More"
         imageSrc="/sleepingAllison.png"
       />

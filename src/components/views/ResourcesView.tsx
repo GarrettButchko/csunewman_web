@@ -8,8 +8,8 @@ export default function ResourcesView() {
           <div className="bg-cream text-button px-8 py-10 sm:px-10">
             <h2 className="font-larken text-3xl">St. Peter Catholic Church</h2>
             <p className="mt-4 text-sm leading-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porttitor,
-              nibh eget commodo sagittis, massa eros iaculis dui, at auctor orci orci vel mi.
+              St. Peter is our home parish for worship, prayer, and student life. Visit us for
+              Sunday Mass, quiet prayer, and the community events that support Newman Ministry.
             </p>
 
             <button className="mt-6 rounded bg-button px-4 py-2 text-sm text-cream hover:opacity-90 transition">
@@ -27,28 +27,28 @@ export default function ResourcesView() {
     
         <section className="w-full px-4">
           <div className="mx-auto max-w-6xl rounded-sm bg-button px-8 py-12 text-cream  sm:px-12 shadow-[0_12px_30px_rgba(0,0,0,0.22)] grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
-            <div>
+            <div className="pe-5">
             <h2 className="font-larken text-3xl">FAQ:</h2>
 
             <div className="mt-6 space-y-5 text-sm text-foreground">
               <div>
-                <p className="font-semibold">Question?</p>
-                <p className="text-foreground/70">Lorem ipsum dolor sit amet.</p>
+                <p className="font-semibold">How do I get involved?</p>
+                <p className="text-foreground/70">Come to Mass, join an event, or reach out through the contact form to connect with our team.</p>
               </div>
 
               <div>
-                <p className="font-semibold">Question?</p>
-                <p className="text-foreground/70">Maecenas porttitor nibh eget commodo.</p>
+                <p className="font-semibold">Where can I find Mass times?</p>
+                <p className="text-foreground/70">Sunday morning and Sunday evening Mass times are listed on this page for easy reference.</p>
               </div>
 
               <div>
-                <p className="font-semibold">Question?</p>
-                <p className="text-foreground/70">Vestibulum aliquam purus at enim.</p>
+                <p className="font-semibold">Can I bring a friend?</p>
+                <p className="text-foreground/70">Yes. Friends are always welcome at Mass, fellowship nights, and campus events.</p>
               </div>
 
               <div>
-                <p className="font-semibold">Question?</p>
-                <p className="text-foreground/70">Sed mattis lobortis sapien.</p>
+                <p className="font-semibold">Who should I contact for questions?</p>
+                <p className="text-foreground/70">Use the contact section below and we will help with ministries, sacraments, and event details.</p>
               </div>
             </div>
           </div>
@@ -148,7 +148,6 @@ const ChurchCard = () => {
           </div>
         </div>
       </div>
-    
   );
 };
 
