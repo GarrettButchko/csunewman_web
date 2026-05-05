@@ -1,9 +1,11 @@
+import { FaFacebookF, FaInstagram, FaEnvelope } from "react-icons/fa";
+
 export default function AboutView() {
   const leadershipTeam = [
     {
       role: 'President',
       name: 'Giuliana Ciccarelli-Aloisi',
-      image: '/Giuliana.jpg', // Replace with actual image URL
+      image: '/Giuliana.jpg',
     },
     {
       role: 'Vice President',
@@ -51,6 +53,31 @@ export default function AboutView() {
               Meet the student and ministry leaders who guide worship, community,
               and campus involvement throughout the year.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl rounded-sm bg-cream px-6 py-8 text-button shadow-[0_12px_30px_rgba(0,0,0,0.16)] sm:px-8">
+        <div className="grid gap-4 lg:grid-cols-[1fr_auto] lg:items-center">
+          <div>
+            <p className="text-xs uppercase tracking-[0.22em] text-button/70">Connect With Us</p>
+            <h3 className="mt-2 font-larken text-3xl text-button">Find us online and get in touch</h3>
+            <p className="mt-2 max-w-2xl text-sm leading-6 text-button/80">
+              Follow our updates, see what&apos;s happening around campus, or send us a message if you
+              want to learn more about the ministry.
+            </p>
+          </div>
+
+          <div className="flex items-center gap-4 text-lightGreen">
+            <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook">
+              <FaFacebookF className="h-5 w-5 transition-opacity hover:opacity-80" />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">
+              <FaInstagram className="h-5 w-5 transition-opacity hover:opacity-80" />
+            </a>
+            <a href="mailto:info@example.com" aria-label="Email us">
+              <FaEnvelope className="h-5 w-5 transition-opacity hover:opacity-80" />
+            </a>
           </div>
         </div>
       </section>

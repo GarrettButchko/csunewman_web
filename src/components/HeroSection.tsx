@@ -6,6 +6,8 @@ interface HeroSectionProps {
   onButtonClick?: () => void;
   bgColor?: string;
   textColor?: string;
+  imageSrc?: string;
+  imageAlt?: string;
 }
 
 export default function HeroSection({
@@ -15,7 +17,17 @@ export default function HeroSection({
   onButtonClick,
   bgColor = "bg-cream",
   textColor = "text-button",
+  imageSrc = "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80",
+  imageAlt = "Hero image",
 }: HeroSectionProps) {
+  const resolvedImageSrc =
+    imageSrc.startsWith("http://") ||
+    imageSrc.startsWith("https://") ||
+    imageSrc.startsWith("/") ||
+    imageSrc.startsWith("data:")
+      ? imageSrc
+      : `/${imageSrc}`;
+
   return (
     <section className="w-full px-4 ">
         <div className="overflow-hidden rounded-sm mx-auto max-w-6xl grid shadow-[0_12px_30px_rgba(0,0,0,0.22)] md:grid-cols-2">
@@ -31,8 +43,13 @@ export default function HeroSection({
           {buttonText}
         </button>
       </div>
-      <div className=" min-h-[260px] bg-[linear-gradient(180deg,#c8c0ae_0%,#f0ece0_12%,#d7cdbb_48%,#b39d86_100%)] p-3 sm:p-4">
-        <div className="h-full min-h-[260px] bg-[radial-gradient(circle_at_50%_20%,rgba(255,255,255,0.9),rgba(255,255,255,0.25)_30%,transparent_31%),linear-gradient(180deg,rgba(255,255,255,0.65),rgba(255,255,255,0.1))] shadow-inner ring-1 ring-white/35" />
+
+      <div className="relative h-full min-h-[260px] overflow-hidden">
+        <img
+          src={resolvedImageSrc}
+          alt={imageAlt}
+          className="h-full min-h-[260px] w-full object-cover"
+        />
       </div>
       </div>
     </section>
