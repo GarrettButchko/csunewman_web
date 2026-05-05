@@ -1,136 +1,154 @@
-const resourceGroups = [
-  {
-    title: 'Mass & Prayer',
-    summary: 'Core worship details and prayer support for students and visitors.',
-    items: ['Sunday Mass times', 'Weekday liturgy schedule', 'Prayer requests'],
-  },
-  {
-    title: 'Campus Life',
-    summary: 'The practical things you need once you are connected to the ministry.',
-    items: ['Event sign-ups', 'Volunteer opportunities', 'Student group updates'],
-  },
-  {
-    title: 'Getting Connected',
-    summary: 'Ways to reach out, ask questions, and stay in the loop during the semester.',
-    items: ['Contact information', 'Newsletter updates', 'Social media links'],
-  },
-];
-
-const quickLinks = [
-  'Mass schedule',
-  'Confession times',
-  'Contact the team',
-  'Join the mailing list',
-];
-
-const supportItems = [
-  {
-    title: 'Need directions?',
-    body: 'Use this page to find the basics before heading to campus or a ministry event.',
-  },
-  {
-    title: 'Looking for a form?',
-    body: 'Start with the most commonly used items so you can get to the right place quickly.',
-  },
-  {
-    title: 'Need to talk to someone?',
-    body: 'Reach out for prayer, scheduling help, or questions about getting involved.',
-  },
-];
-
 export default function ResourcesView() {
   return (
-    <div className="space-y-8 bg-background px-4 py-8 text-cream sm:px-6 lg:px-8">
-      <section className="mx-auto max-w-6xl rounded-sm bg-button px-6 py-10 shadow-[0_12px_30px_rgba(0,0,0,0.22)] sm:px-8 lg:px-10">
-        <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
-          <div className="max-w-2xl">
-            <p className="text-xs uppercase tracking-[0.25em] text-cream/70">Resources</p>
-            <h2 className="mt-2 font-larken text-4xl leading-none text-cream sm:text-5xl">
-              A quick directory for students and visitors.
-            </h2>
-            <p className="mt-4 max-w-xl text-sm leading-6 text-cream/80 sm:text-base">
-              Use this page to find the essentials fast: worship times, contact info, forms, and the
-              tools that help you stay connected during the semester.
+    <div className="space-y-8 bg-background pb-10 text-foreground">
+
+      <section className="w-full px-4 pt-4">
+        <div className="mx-auto max-w-6xl grid lg:grid-cols-2 h-[300px] overflow-hidden rounded-sm shadow-[0_12px_30px_rgba(0,0,0,0.22)]">
+          
+          <div className="bg-cream text-button px-8 py-10 sm:px-10">
+            <h2 className="font-larken text-3xl">St. Peter Catholic Church</h2>
+            <p className="mt-4 text-sm leading-6">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porttitor,
+              nibh eget commodo sagittis, massa eros iaculis dui, at auctor orci orci vel mi.
             </p>
+
+            <button className="mt-6 rounded bg-button px-4 py-2 text-sm text-cream hover:opacity-90 transition">
+              Open in Maps
+            </button>
           </div>
 
-          <div className="rounded-sm border border-cream/20 bg-cream/10 p-5 text-sm text-cream/85">
-            <p className="font-semibold text-cream">Quick access</p>
-            <div className="mt-4 flex flex-wrap gap-2">
-              {quickLinks.map((link) => (
-                <span
-                  key={link}
-                  className="rounded-full border border-cream/20 bg-background/10 px-3 py-1 text-xs uppercase tracking-[0.16em] text-cream/80"
-                >
-                  {link}
-                </span>
-              ))}
-            </div>
-          </div>
+          <img
+            src="/church.jpg"
+            alt="Church"
+            className="h-full w-full object-cover min-h-[260px]"
+          />
         </div>
       </section>
-
-      <section className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-[1.15fr_0.85fr]">
-        <div className="rounded-sm bg-cream p-6 text-[#2D3E1A] shadow-[0_12px_30px_rgba(0,0,0,0.16)] sm:p-8">
-          <div className="flex items-center justify-between gap-4 border-b border-[#c8cfab] pb-4">
+    
+        <section className="w-full px-4">
+          <div className="mx-auto max-w-6xl rounded-sm bg-button px-8 py-12 text-cream  sm:px-12 shadow-[0_12px_30px_rgba(0,0,0,0.22)] grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
             <div>
-              <p className="text-xs uppercase tracking-[0.22em] text-[#6a764e]">Directory</p>
-              <h3 className="mt-1 font-larken text-3xl text-button">Most-used resources</h3>
-            </div>
-            <p className="text-right text-sm text-[#556245]">Updated throughout the semester</p>
-          </div>
+            <h2 className="font-larken text-3xl">FAQ:</h2>
 
-          <div className="mt-6 space-y-4">
-            {resourceGroups.map((group) => (
-              <div
-                key={group.title}
-                className="grid gap-4 border-b border-[#d8dec1] pb-4 last:border-b-0 last:pb-0 sm:grid-cols-[0.9fr_1.1fr]"
-              >
-                <div>
-                  <h4 className="font-larken text-2xl text-button">{group.title}</h4>
-                  <p className="mt-2 text-sm leading-6 text-[#556245]">{group.summary}</p>
-                </div>
-
-                <ul className="space-y-2 text-sm text-[#2D3E1A]">
-                  {group.items.map((item) => (
-                    <li key={item} className="flex items-center justify-between gap-3 rounded-sm bg-background/5 px-4 py-3">
-                      <span>{item}</span>
-                      <span className="text-xs uppercase tracking-[0.16em] text-[#6a764e]">Open</span>
-                    </li>
-                  ))}
-                </ul>
+            <div className="mt-6 space-y-5 text-sm text-foreground">
+              <div>
+                <p className="font-semibold">Question?</p>
+                <p className="text-foreground/70">Lorem ipsum dolor sit amet.</p>
               </div>
-            ))}
+
+              <div>
+                <p className="font-semibold">Question?</p>
+                <p className="text-foreground/70">Maecenas porttitor nibh eget commodo.</p>
+              </div>
+
+              <div>
+                <p className="font-semibold">Question?</p>
+                <p className="text-foreground/70">Vestibulum aliquam purus at enim.</p>
+              </div>
+
+              <div>
+                <p className="font-semibold">Question?</p>
+                <p className="text-foreground/70">Sed mattis lobortis sapien.</p>
+              </div>
+            </div>
           </div>
+          
+          <ChurchCard/>
         </div>
-
-        <aside className="space-y-6">
-          <section className="rounded-sm bg-button px-6 py-6 text-cream shadow-[0_12px_30px_rgba(0,0,0,0.18)]">
-            <p className="text-xs uppercase tracking-[0.22em] text-cream/70">Support</p>
-            <h3 className="mt-2 font-larken text-3xl">Need help finding something?</h3>
-            <div className="mt-4 space-y-4 text-sm text-cream/85">
-              {supportItems.map((item) => (
-                <div key={item.title} className="border-t border-cream/15 pt-4 first:border-t-0 first:pt-0">
-                  <p className="font-semibold text-cream">{item.title}</p>
-                  <p className="mt-1 leading-6">{item.body}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          <section className="rounded-sm bg-cream px-6 py-6 text-[#2D3E1A] shadow-[0_12px_30px_rgba(0,0,0,0.16)]">
-            <p className="text-xs uppercase tracking-[0.22em] text-[#6a764e]">Highlighted tools</p>
-            <div className="mt-4 space-y-3">
-              {['Newsletter signup', 'Campus map', 'Calendar download', 'Prayer request form'].map((tool) => (
-                <div key={tool} className="flex items-center justify-between rounded-sm border border-lightGreen/60 px-4 py-3 text-sm">
-                  <span className="font-medium text-button">{tool}</span>
-                  <span className="text-xs uppercase tracking-[0.16em] text-[#6a764e]">Go</span>
-                </div>
-              ))}
-            </div>
-          </section>
-        </aside>
       </section>
+      
+
+      <section className="w-full px-4">
+        <div className="mx-auto max-w-6xl grid lg:grid-cols-2 h-[300px] overflow-hidden rounded-sm shadow-[0_12px_30px_rgba(0,0,0,0.22)]">
+
+          <div className="bg-cream text-button px-8 py-10 sm:px-10">
+            <h2 className="font-larken text-3xl">Join Our GroupMe</h2>
+            <p className="mt-4 text-sm leading-6">
+              Stay connected with events, updates, and community announcements.
+            </p>
+
+            <button className="mt-6 rounded bg-button px-4 py-2 text-sm text-cream hover:opacity-90 transition">
+              GroupMe Link
+            </button>
+          </div>
+
+          <img
+            src="/groupphoto.png"
+            alt="Group"
+            className="h-full w-full object-cover min-h-[260px]"
+          />
+        </div>
+      </section>
+
+      <section className="w-full px-4">
+        <div className="mx-auto max-w-6xl rounded-sm bg-button px-8 py-12 text-cream  sm:px-12 shadow-[0_12px_30px_rgba(0,0,0,0.22)] grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
+
+          <div>
+            <h2 className="font-larken text-3xl">Still Have Questions?</h2>
+            <p className="mt-2 text-sm text-foreground/70">
+              We would love to hear from you!
+            </p>
+
+            <div className="mt-6 space-y-4 text-sm text-foreground/80">
+              <p>
+                <strong>Location:</strong><br />
+                2355 E. Dewey Road<br />
+                Amherst, OH 44001
+              </p>
+
+              <p>
+                <strong>Email:</strong><br />
+                example@email.com
+              </p>
+
+              <p>
+                <strong>Telephone:</strong><br />
+                440-320-7666
+              </p>
+            </div>
+          </div>
+
+          <form className="max-w-lg rounded-sm bg-cream p-8 shadow-[-24px_24px_0px_0px_#adb680] space-y-3 text-[#2D3E1A]">
+            <input className="w-full rounded px-3 py-1.5 bg-lightGreen/30 text-sm" placeholder="Name" />
+            <input className="w-full rounded px-3 py-1.5 bg-lightGreen/30 text-sm" placeholder="Email" />
+            <input className="w-full rounded px-3 py-1.5 bg-lightGreen/30 text-sm" placeholder="Phone" />
+            <input className="w-full rounded px-3 py-1.5 bg-lightGreen/30 text-sm" placeholder="Subject" />
+            <textarea 
+              className="w-full rounded px-3 py-1.5 bg-lightGreen/30 text-sm"
+              placeholder="Message"
+              rows={3}/>
+            <button className="w-full rounded bg-button py-1.5 text-cream text-sm hover:opacity-90">
+              Submit
+            </button>
+          </form>
+        </div>
+      </section>
+
     </div>
   );
 }
+
+const ChurchCard = () => {
+  return (
+      <div className="max-w-lg rounded-sm bg-cream p-12 shadow-[-24px_24px_0px_0px_#adb680] items-start">
+        <h2 className="inline-block text-4xl font-serif text-button">
+          Mass Times
+        </h2>
+        <p className="mt-[-3] mb-5 text-xs text-button/70">Location: St. Peter Catholic Church</p>
+        <div className="space-y-6 font-serif text-[#2D3E1A]">
+        
+          <div>
+            <h2 className="text-xl font-serif font-bold">Sunday Morning:</h2>
+            <p className="text-l">11:30 am</p>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-serif font-bold">Sunday Evening:</h2>
+            <p className="text-l">7:00 pm (Newman mass)</p>
+          </div>
+        </div>
+      </div>
+    
+  );
+};
+
